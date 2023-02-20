@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/81c1afbf5a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container py-4">
+            <div class="logo d-flex">
+                <a class="navbar-brand text-white" href="#">
+                    <img src="images/logo.png" alt="">
+                </a>
+                <div class="logo-text">
+                    <a href="#" class="navbar-brand">
+                        <h1 class="text-white mb-0">Weather</h1>
+                        <small class="text-white">tagline goes here</small>
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0  ms-auto justify-content-evenly">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="contact">
+        <div class="container">
+            <div class="link p-2 rounded-5 d-flex align-items-baseline">
+                <a href="index.html" class="text-decoration-none text-secondary p-2">Home
+                </a>
+                <i class="fa-solid fa-arrow-right text-secondary pe-2"></i>
+                <p class="text-white d-inline-block">Contact</p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-5">
+                    <div class="company-info text-secondary py-5 px-3 rounded-3 my-5">
+                        <p class="pt-5">
+                            <i class="fa-solid text-primary fa-location-dot"></i>
+                            Company Name INC.</p>
+                        <p>2803 Avenue Street, Los Angeles</p>
+                        <a href="#" class="text-decoration-none text-secondary p-2">
+                            <i class="fa-solid text-primary fa-phone"></i>
+                            +1 800 314 235</a>
+                        <a href="#" class="text-decoration-none text-secondary p-2">
+                            <i class="fa-solid text-primary fa-envelope"></i>
+                            contact@companyname.com</a>
+                    </div>
+                </div>
+                <div class="offset-md-1 col-md-6">
+                    <div class="message my-5">
+                        <h2 class="text-white">Contact us</h2>
+                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur inventore ducimus, facilis, numquam id soluta omnis eius recusandae nesciunt vero repellat harum cum. Nisi facilis odit hic, ipsum sed!</p>
+                    <form action="">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" name="uname" class="rounded-5  px-4 py-3 w-100" placeholder="Your name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="uname" class="rounded-5  px-4 py-3 w-100" placeholder="Email Addresss">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="uname" class="rounded-5  px-4 py-3 w-100" placeholder="Company name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="uname" class="rounded-5  px-4 py-3 w-100" placeholder="Website">
+                            </div>
+                            <div class="col-md-12">
+                                <textarea name="message"rows="5" class="rounded-5 px-4 py-3 w-100" placeholder="Message..."></textarea>
+                            </div>
+                            <div class="offset-10 col-3">
+                                <button class="btn btn-primary rounded-5 px-3">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-7">
+                    <div class="sub position-relative">
+                        <input type="text" class="form-control text-white p-3 rounded-5"
+                            placeholder="Enter your Email to subscripe">
+                        <button
+                            class="btn btn-primary px-4 me-2 py-2 rounded-5 position-absolute top-50 end-0 translate-middle-y">Subsrcibe</button>
+                    </div>
+                </div>
+                <div class=" offset-md-2 col-md-3">
+                    <div class="icons d-flex justify-content-evenly">
+                        <i class="fa-brands fa-xl text-primary py-3 px-2 bg-dark rounded-circle mt-4 fa-facebook"></i>
+                        <i class="fa-brands fa-xl text-primary py-3 px-2 bg-dark rounded-circle mt-4 fa-twitter"></i>
+                        <i
+                            class="fa-brands fa-xl text-primary py-3 px-2 bg-dark rounded-circle mt-4 fa-google-plus-g"></i>
+                        <i class="fa-brands fa-xl text-primary py-3 px-2 bg-dark rounded-circle mt-4 fa-pinterest"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right mt-4">
+                Copyright 2014 Company name. Designed by Themezy. All rights reserved
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

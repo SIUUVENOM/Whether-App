@@ -140,3 +140,37 @@ footer {
 .copy-right {
   color: gray;
 }
+
+
+/* =====Contact===== */
+
+.contact{
+  background-color: #1e202b;
+}
+
+.contact .link{
+  background-color: #262936;
+}
+.contact .link a:hover{
+  text-decoration: underline !important;
+}
+.company-info{
+  background-color: #262936;
+}
+.message input,.message textarea{
+  background-color: #1e202b;
+  border: 3px solid #262936;
+  transition: border-color .2s;
+  -webkit-transition: border-color .2s;
+  -moz-transition: border-color .2s;
+  -ms-transition: border-color .2s;
+  -o-transition: border-color .2s;
+  color: #fff;
+}
+.message input:hover,.message textarea:hover{
+  border-color: #009ad8;
+}
+.message input:focus,.message textarea:focus{
+  outline: none;
+  border-color: #009ad8;
+}
