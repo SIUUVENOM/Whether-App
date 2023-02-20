@@ -17,11 +17,14 @@ document.querySelector(".search input").addEventListener('keyup', (api) => {
     getData(api.target.value)
 })
 getData()
-function display(c,l) {
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+let months =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+let t = new Date();
+function display(c, l) {
         let n = `
         <div class="forcast-head p-2 d-flex justify-content-between text-white">
-                <div class="day">${c.last_updated}</div>
-                <div class="country">${l.country}</div>
+                <div class="day">${days[t.getDay()]}</div>
+                <div class="country">${t.getDate()}${months[t.getMonth()]}</div>
               </div>
               <div class="forcast-content text-white px-3 py-3 rounded-bottom-3">
                 <div class="location">${l.name}</div>
@@ -46,7 +49,7 @@ function display(c,l) {
 function displayTomoro(f) {
     let n = `
     <div class="next-forcast-head p-2 text-white">
-                <div class="day">${f.date}</div>
+                <div class="day">${days[t.getDay()+1]}</div>
               </div>
               <div class="next-forcast-content text-white py-2 rounded-bottom-3">
                 <div class="icon ms-auto align-self-center">
@@ -72,7 +75,7 @@ function displayTomoro(f) {
 function displayAfterTomoro(f) {
     n = `
     <div class="third-forcast-head p-2 text-white rounded-end-3">
-                <div class="day">${f.date}</div>
+                <div class="day">${days[t.getDay()+2]}</div>
               </div>
               <div class="third-forcast-content text-white py-2 rounded-bottom-3">
                 <div class="icon ms-auto align-self-center">
