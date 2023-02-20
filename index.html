@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/81c1afbf5a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container py-4">
+      <div class="logo d-flex">
+        <a class="navbar-brand text-white" href="#">
+          <img src="images/logo.png" alt="">
+        </a>
+        <div class="logo-text">
+          <a href="#" class="navbar-brand">
+            <h1 class="text-white mb-0">Weather</h1>
+            <small class="text-white">tagline goes here</small>
+          </a>
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0  ms-auto justify-content-evenly">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Live cameras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="main">
+    <div class="container">
+      <div class="search position-relative mb-3">
+        <input type="text" id="search" class="form-control rounded-5 p-3 text-white" placeholder="Find your Location">
+        <button
+          class="btn btn-primary px-4 me-2 py-2 rounded-5 position-absolute top-50 end-0 translate-middle-y">Find</button>
+      </div>
+      <div class="show-wheather">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <div class="today-forcast" id="today-forcast">
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="forcast text-center" id="tomoro">
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="forcast text-center" id="aftertomoro">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="py-5">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-md-7">
+          <div class="sub position-relative">
+            <input type="text" class="form-control text-white p-3 rounded-5"
+              placeholder="Enter your Email to subscripe">
+            <button
+              class="btn btn-primary px-4 me-2 py-2 rounded-5 position-absolute top-50 end-0 translate-middle-y">Subsrcibe</button>
+          </div>
+        </div>
+        <div class=" offset-md-2 col-md-3">
+          <div class="icons d-flex justify-content-evenly">
+            <i class="fa-brands fa-xl text-primary py-3 px-2 bg-dark rounded-circle mt-4 fa-facebook"></i>
+            <i class="fa-brands fa-xl text-primary py-3 px-2 bg-dark rounded-circle mt-4 fa-twitter"></i>
+            <i class="fa-brands fa-xl text-primary py-3 px-2 bg-dark rounded-circle mt-4 fa-google-plus-g"></i>
+            <i class="fa-brands fa-xl text-primary py-3 px-2 bg-dark rounded-circle mt-4 fa-pinterest"></i>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right mt-4">
+        Copyright 2014 Company name. Designed by Themezy. All rights reserved
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
