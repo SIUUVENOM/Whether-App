@@ -39,9 +39,9 @@ function display(c, l) {
                   </div>
                 </div>
                 <div class="cureent-weahter text-primary py-1">${c.condition.text}</div>
-                <span class="p-2"><img src="images/icon-umberella.png" class="p-2">20%</span>
-                <span class="p-2"><img src="images/mobile.png" class="p-2">18km/h</span>
-                <span class="p-2"><img src="images/icon-compass.png" class="p-2">East</span>
+                <span class="p-2"><img src="images/icon-umberella.png" class="p-2">${c.cloud}%</span>
+                <span class="p-2"><img src="images/mobile.png" class="p-2">${c.wind_kph}km/h</span>
+                <span class="p-2"><img src="images/icon-compass.png" class="p-2">${c.wind_dir}</span>
               </div>
         `
     todayForcast.innerHTML=n
