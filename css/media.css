@@ -1,0 +1,51 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .show-wheather .forcast-head {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+      
+      .show-wheather .forcast-content{
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .show-wheather .next-forcast-head{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+
+      .show-wheather .next-forcast-content{
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .show-wheather .third-forcast-head{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+      
+      .show-wheather .third-forcast-content{
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) {
+}

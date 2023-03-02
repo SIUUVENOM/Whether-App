@@ -26,7 +26,7 @@ function display(c, l) {
                 <div class="day">${days[t.getDay()]}</div>
                 <div class="country">${t.getDate()}${months[t.getMonth()]}</div>
               </div>
-              <div class="forcast-content text-white px-3 py-3 rounded-bottom-3">
+              <div class="forcast-content text-white px-2 py-2">
                 <div class="location">${l.name}</div>
                 <div class="deg d-flex">
                   <div class="num" >
@@ -38,10 +38,12 @@ function display(c, l) {
                     <img src="https://${c.condition.icon}" alt="">
                   </div>
                 </div>
-                <div class="cureent-weahter text-primary py-1">${c.condition.text}</div>
-                <span class="p-2"><img src="images/icon-umberella.png" class="p-2">${c.cloud}%</span>
-                <span class="p-2"><img src="images/mobile.png" class="p-2">${c.wind_kph}km/h</span>
-                <span class="p-2"><img src="images/icon-compass.png" class="p-2">${c.wind_dir}</span>
+                <div class="cureent-weahter text-primary">${c.condition.text}</div>
+                <div class="details d-flex justify-content-evenly mt-2">
+                <span><img src="images/icon-umberella.png" class="px-2">${c.cloud}%</span>
+                <span><img src="images/mobile.png" class="px-2">${c.wind_kph}km/h</span>
+                <span><img src="images/icon-compass.png" class="px-2">${c.wind_dir}</span>
+                </div>
               </div>
         `
     todayForcast.innerHTML=n
@@ -51,7 +53,7 @@ function displayTomoro(f) {
     <div class="next-forcast-head p-2 text-white">
                 <div class="day">${days[t.getDay()+1]}</div>
               </div>
-              <div class="next-forcast-content text-white py-2 rounded-bottom-3">
+              <div class="next-forcast-content text-white px-3 py-2">
                 <div class="icon ms-auto align-self-center">
                   <img src="https://${f.day.condition.icon}">
                 </div>
@@ -67,17 +69,23 @@ function displayTomoro(f) {
                     C
                     </div>
                   </div>
-                  <div class="curent-weahter text-primary py-2">${f.day.condition.text}</div>
+                  <div class="curent-weahter text-primary">${f.day.condition.text}</div>
                 </div>
     `
     tomoro.innerHTML=n
 }
 function displayAfterTomoro(f) {
-    n = `
-    <div class="third-forcast-head p-2 text-white rounded-end-3">
-                <div class="day">${days[t.getDay()+2]}</div>
+  let z = t.getDay()
+  if (t.getDay() == 5) {
+    z=0
+  } else {
+    z+2
+  }
+    let n = `
+    <div class="third-forcast-head p-2 text-white">
+                <div class="day">${days[z]}</div>
               </div>
-              <div class="third-forcast-content text-white py-2 rounded-bottom-3">
+              <div class="third-forcast-content text-white px-3 py-2">
                 <div class="icon ms-auto align-self-center">
                   <img src="https://${f.day.condition.icon}" alt="">
                 </div>
@@ -93,7 +101,7 @@ function displayAfterTomoro(f) {
                     C
                     </div>
                   </div>
-                  <div class="curent-weahter text-primary py-2">${f.day.condition.text}</div>
+                  <div class="curent-weahter text-primary">${f.day.condition.text}</div>
                 </div>
     `
     afterTomoro.innerHTML=n
