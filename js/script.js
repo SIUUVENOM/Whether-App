@@ -1,27 +1,50 @@
-let todayForcast = document.getElementById('today-forcast')
-let tomoro =document.getElementById('tomoro')
-let afterTomoro =document.getElementById('aftertomoro')
+let todayForcast = document.getElementById("today-forcast");
+let tomoro = document.getElementById("tomoro");
+let afterTomoro = document.getElementById("aftertomoro");
 async function getData(city) {
-    if (city == undefined) {
-        city='cairo'
-    }
-    let result = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a3151101212704&q=${city}&days=3`)
-    if (result.ok && result.status == 200) {
-        let data = await result.json()
-        display(data.current, data.location)
-        displayTomoro(data.forecast.forecastday[1])
-        displayAfterTomoro(data.forecast.forecastday[2])
-    }
+  if (city == undefined) {
+    city = "cairo";
+  }
+  let result = await fetch(
+    `https://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a3151101212704&q=${city}&days=3`
+  );
+  if (result.ok && result.status == 200) {
+    let data = await result.json();
+    display(data.current, data.location);
+    displayTomoro(data.forecast.forecastday[1]);
+    displayAfterTomoro(data.forecast.forecastday[2]);
+  }
 }
-document.querySelector(".search input").addEventListener('keyup', (api) => {
-    getData(api.target.value)
-})
-getData()
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-let months =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+document.querySelector(".search input").addEventListener("keyup", (api) => {
+  getData(api.target.value);
+});
+getData();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 let t = new Date();
 function display(c, l) {
-        let n = `
+  let n = `
         <div class="forcast-head p-2 d-flex justify-content-between text-white">
                 <div class="day">${days[t.getDay()]}</div>
                 <div class="country">${t.getDate()}${months[t.getMonth()]}</div>
@@ -38,22 +61,30 @@ function display(c, l) {
                     <img src="https://${c.condition.icon}" alt="">
                   </div>
                 </div>
-                <div class="cureent-weahter text-primary">${c.condition.text}</div>
+                <div class="cureent-weahter text-primary">${
+                  c.condition.text
+                }</div>
                 <div class="details d-flex justify-content-evenly mt-2">
-                <span><img src="images/icon-umberella.png" class="px-2">${c.cloud}%</span>
-                <span><img src="images/mobile.png" class="px-2">${c.wind_kph}km/h</span>
-                <span><img src="images/icon-compass.png" class="px-2">${c.wind_dir}</span>
+                <span><img src="images/icon-umberella.png" class="px-2">${
+                  c.cloud
+                }%</span>
+                <span><img src="images/mobile.png" class="px-2">${
+                  c.wind_kph
+                }km/h</span>
+                <span><img src="images/icon-compass.png" class="px-2">${
+                  c.wind_dir
+                }</span>
                 </div>
               </div>
-        `
-    todayForcast.innerHTML=n
+        `;
+  todayForcast.innerHTML = n;
 }
 function displayTomoro(f) {
-  let z = t.getDay()
+  let z = t.getDay() + 1;
   if (t.getDay() == 6) {
-    z=0
+    z = 0;
   }
-    let n = `
+  let n = `
     <div class="next-forcast-head p-2 text-white">
                 <div class="day">${days[z]}</div>
               </div>
@@ -75,21 +106,18 @@ function displayTomoro(f) {
                   </div>
                   <div class="curent-weahter text-primary">${f.day.condition.text}</div>
                 </div>
-    `
-    tomoro.innerHTML=n
+    `;
+  tomoro.innerHTML = n;
 }
 function displayAfterTomoro(f) {
-  let z = t.getDay()
+  let z = t.getDay() + 2;
   if (t.getDay() == 5) {
-    z=0
+    z = 0;
   } else if (t.getDay() == 6) {
-    z = 0
-    z++
+    z = 0;
+    z++;
   }
-  else {
-    z+=2
-  }
-    let n = `
+  let n = `
     <div class="third-forcast-head p-2 text-white">
                 <div class="day">${days[z]}</div>
               </div>
@@ -111,6 +139,6 @@ function displayAfterTomoro(f) {
                   </div>
                   <div class="curent-weahter text-primary">${f.day.condition.text}</div>
                 </div>
-    `
-    afterTomoro.innerHTML=n
+    `;
+  afterTomoro.innerHTML = n;
 }
