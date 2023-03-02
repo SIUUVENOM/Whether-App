@@ -49,9 +49,13 @@ function display(c, l) {
     todayForcast.innerHTML=n
 }
 function displayTomoro(f) {
+  let z = t.getDay()
+  if (t.getDay() == 6) {
+    z=0
+  }
     let n = `
     <div class="next-forcast-head p-2 text-white">
-                <div class="day">${days[t.getDay()+1]}</div>
+                <div class="day">${days[z]}</div>
               </div>
               <div class="next-forcast-content text-white px-3 py-2">
                 <div class="icon ms-auto align-self-center">
@@ -78,8 +82,12 @@ function displayAfterTomoro(f) {
   let z = t.getDay()
   if (t.getDay() == 5) {
     z=0
-  } else {
-    z+2
+  } else if (t.getDay() == 6) {
+    z = 0
+    z++
+  }
+  else {
+    z+=2
   }
     let n = `
     <div class="third-forcast-head p-2 text-white">
